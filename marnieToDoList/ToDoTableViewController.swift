@@ -9,28 +9,57 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
     
-    var toDos : [ToDo] = []
+    //iteration 0/1
+    //var toDos : [ToDo] = []
+    
+    var toDos : [ToDoCD] = []
+    
+ 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toDos = createToDos()
+        //iteration 1
+       // toDos = createToDos()
+       // getToDos()
         
     }
     
-    func createToDos() -> [ToDo] {
-        
-        let swift = ToDo()
-        swift.name = "Learn Swift"
-        swift.important = true
-        
-        let dog = ToDo()
-        dog.name = "Walk the Dog"
-        //important is set to false by default
-        
-        return [swift, dog]
-        
+    func getToDos() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+                //incorrect verion of swift for this code!
+//                if let theToDos = coreDataToDos {
+//                    toDos = theToDos
+//                    tableView.reloadData()
+                toDos = coreDataToDos
+                tableView.reloadData()
+                
+                }
+            }
+            
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getToDos()
     }
+    
+    //iteration 0
+//    func createToDos() -> [ToDo] {
+//
+//        let swift = ToDo()
+//        swift.name = "Learn Swift"
+//        swift.important = true
+//
+//        let dog = ToDo()
+//        dog.name = "Walk the Dog"
+//        //important is set to false by default
+//
+//        return [swift, dog]
+//
+//    }
 
     // MARK: - Table view data source
 
@@ -56,14 +85,19 @@ class ToDoTableViewController: UITableViewController {
 
         let toDo = toDos[indexPath.row]
         
+        
+        if let name = toDo.name {
         if toDo.important {
-            cell.textLabel?.text = "❗️" + toDo.name
+            cell.textLabel?.text = "❗️" + name
         } else {
             cell.textLabel?.text = toDo.name
         }
+        }
 
         return cell
+    
     }
+ 
     
 
     /*
@@ -109,7 +143,7 @@ class ToDoTableViewController: UITableViewController {
         }
         
         if let completeVC = segue.destination as? CompleteToDoViewController {
-            if let toDo = sender as? ToDo {
+            if let toDo = sender as? ToDoCD {
             completeVC.selectedToDo = toDo
             completeVC.previousVC = self
             }
