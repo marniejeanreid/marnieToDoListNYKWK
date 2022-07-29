@@ -18,6 +18,8 @@
 		BDBC9F102892E24000A09701 /* marnieToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC9F0F2892E24000A09701 /* marnieToDoListUITestsLaunchTests.swift */; };
 		BDBC9F1D2892E37F00A09701 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC9F1C2892E37F00A09701 /* ToDoTableViewController.swift */; };
 		BDBC9F1F2892E60700A09701 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC9F1E2892E60700A09701 /* ToDo.swift */; };
+		BDBC9F21289310B100A09701 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC9F20289310B100A09701 /* AddToDoViewController.swift */; };
+		BDBC9F232893171F00A09701 /* CompleteToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC9F222893171F00A09701 /* CompleteToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BDBC9F0F2892E24000A09701 /* marnieToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marnieToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BDBC9F1C2892E37F00A09701 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		BDBC9F1E2892E60700A09701 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		BDBC9F20289310B100A09701 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		BDBC9F222893171F00A09701 /* CompleteToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				BDBC9EEF2892E23F00A09701 /* Main.storyboard */,
 				BDBC9F1E2892E60700A09701 /* ToDo.swift */,
 				BDBC9F1C2892E37F00A09701 /* ToDoTableViewController.swift */,
+				BDBC9F20289310B100A09701 /* AddToDoViewController.swift */,
+				BDBC9F222893171F00A09701 /* CompleteToDoViewController.swift */,
 				BDBC9EF52892E24000A09701 /* Assets.xcassets */,
 				BDBC9EF72892E24000A09701 /* LaunchScreen.storyboard */,
 				BDBC9EFA2892E24000A09701 /* Info.plist */,
@@ -267,7 +273,9 @@
 				BDBC9EF42892E23F00A09701 /* marnieToDoList.xcdatamodeld in Sources */,
 				BDBC9F1F2892E60700A09701 /* ToDo.swift in Sources */,
 				BDBC9F1D2892E37F00A09701 /* ToDoTableViewController.swift in Sources */,
+				BDBC9F232893171F00A09701 /* CompleteToDoViewController.swift in Sources */,
 				BDBC9EEA2892E23F00A09701 /* AppDelegate.swift in Sources */,
+				BDBC9F21289310B100A09701 /* AddToDoViewController.swift in Sources */,
 				BDBC9EEC2892E23F00A09701 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
